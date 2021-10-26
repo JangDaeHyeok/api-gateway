@@ -9,8 +9,7 @@ podTemplate(label: 'builder',
             containers: [
                 containerTemplate(name: 'gradle', image: 'gradle:7.1-jdk11', command: 'cat', ttyEnabled: true),
                 containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
-                containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.15.3', command: 'cat', ttyEnabled: true),
-                containerTemplate(name: 'redis', image: 'redis:6.2', command: 'cat', ttyEnabled: true)
+                containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.15.3', command: 'cat', ttyEnabled: true)
             ],
             volumes: [
                 hostPathVolume(mountPath: '/home/gradle/.gradle', hostPath: '/home/admin/k8s/jenkins/.gradle'),
