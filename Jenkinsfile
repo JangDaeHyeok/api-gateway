@@ -33,6 +33,7 @@ podTemplate(label: 'builder',
                 	build ���� �Ŀ��� sonarqube�� Ȱ���Ͽ� �ҽ������м��� ����
                 */
                 // sh "gradle -x test build sonarqube --no-daemon"
+                sh "gradle clean"
                 sh "gradle -x test build --no-daemon"
             }
         }
