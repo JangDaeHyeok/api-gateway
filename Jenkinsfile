@@ -26,7 +26,7 @@ podTemplate(label: 'builder',
             		jvm memory ���� & gradle daemon �̻�� ����
             		gradle 3.0 ���� CI ȯ�濡���� daemon�� ������� �ʵ��� �����ϰ� ����
             	*/
-            	sh "echo -e '\norg.gradle.jvmargs=-Xmx1024m\norg.gradle.daemon=false' >> ~/.gradle/gradle.properties"
+            	sh "echo -e '\norg.gradle.jvmargs=-Xmx1543m\norg.gradle.daemon=false' >> ~/.gradle/gradle.properties"
                 /* 
                 	��Ŀ �̹����� Ȱ���Ͽ� gradle ���带 �����Ͽ� ./build/libs�� jar���� ����
                 	���� �̻������ ����
