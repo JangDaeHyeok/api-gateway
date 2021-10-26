@@ -3,4 +3,5 @@ VOLUME /tmp
 EXPOSE 8080
 ADD ./build/libs/gateway-0.0.1-SNAPSHOT.jar app.jar
 ENV JAVA_OPTS=""
+CMD ["redis-server"]
 ENTRYPOINT ["java","-jar","/app.jar"]
