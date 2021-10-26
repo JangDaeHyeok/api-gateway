@@ -1,6 +1,6 @@
 server:
-#  port: 6119
-  port: 8090
+  port: 6119
+#  port: 8090
 
 spring:
   cloud:
@@ -14,7 +14,7 @@ spring:
       routes:
         - id: board-svc
 #          uri: http://localhost:8083
-          uri: http://board.test.com
+          uri: board.test.com
           predicates:
             - Path=/board/**
           filters:
@@ -25,7 +25,7 @@ spring:
                 postLogger: true
         - id: user-svc
 #          uri: http://localhost:8084
-          uri: http://user.test.com
+          uri: user.test.com
           predicates:
             - Path=/user/**
           filters:
