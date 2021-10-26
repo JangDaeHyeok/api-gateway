@@ -1,4 +1,4 @@
-FROM sktellecom/centos7:jdk-11-redis
+FROM sktellecom/centos7:jdk-11
 VOLUME /tmp
 EXPOSE 8090
 ADD ./build/libs/gateway-0.0.1-SNAPSHOT.jar app.jar

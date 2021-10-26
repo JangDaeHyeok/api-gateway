@@ -44,7 +44,7 @@ spring:
     redis:
       flush-mode: immediate
   redis:
-    host: localhost
+    host: 10.107.154.34
     port: 6379
     
 
