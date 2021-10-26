@@ -21,5 +21,10 @@ spec:
           env:
             - name: DATE
               value: 'DATE_STRING'
+          resources:
+            limits:
+              memory: "2Gi"
+            requests:
+              memory: "1Gi"
       imagePullSecrets:
         - name: ms-secret
