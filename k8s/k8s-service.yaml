@@ -10,4 +10,5 @@ spec:
       nodePort: 30010
   selector:
     app: gateway-api
+  clusterIP: 10.107.154.33
   type: NodePort
