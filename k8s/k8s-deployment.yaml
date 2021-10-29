@@ -31,6 +31,6 @@ spec:
       readinessProbe:
         httpGet:
           path: /readiness
-          port: 3000
+          port: 8090
         initialDelaySeconds: 5
         periodSeconds: 5
