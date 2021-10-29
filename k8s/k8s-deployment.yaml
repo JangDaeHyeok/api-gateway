@@ -18,6 +18,12 @@ spec:
           ports:
             - containerPort: 8090
           imagePullPolicy: Always
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: 8090
+            initialDelaySeconds: 5
+            periodSeconds: 5
           env:
             - name: DATE
               value: 'DATE_STRING'
@@ -28,9 +34,3 @@ spec:
               memory: "1Gi"
       imagePullSecrets:
         - name: ms-secret
-      readinessProbe:
-        httpGet:
-          path: /readiness
-          port: 8090
-        initialDelaySeconds: 5
-        periodSeconds: 5
