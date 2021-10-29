@@ -28,3 +28,9 @@ spec:
               memory: "1Gi"
       imagePullSecrets:
         - name: ms-secret
+      readinessProbe:
+        httpGet:
+          path: /readiness
+          port: 3000
+        initialDelaySeconds: 5
+        periodSeconds: 5
