@@ -46,8 +46,10 @@ public class GlobalFilter extends AbstractGatewayFilterFactory<GlobalFilter.Conf
 	    excludePatterns.add(new PathPatternParser().parse("/user/join**"));
 	    excludePatterns.add(new PathPatternParser().parse("/user/checkId**"));
 	    excludePatterns.add(new PathPatternParser().parse("/user/logout**"));
+	    excludePatterns.add(new PathPatternParser().parse("/board/file/download/**"));
+	    excludePatterns.add(new PathPatternParser().parse("/readiness**"));
 	    
-        return ((exchange, chain) -> {
+        return ((exchange, chain) -> { 
             logger.info("===========================================================");
             if (config.isPreLogger()) {
                 logger.info("GlobalFilter Start>>>>>>" + exchange.getRequest());
